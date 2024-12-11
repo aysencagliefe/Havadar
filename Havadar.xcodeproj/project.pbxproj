@@ -1,0 +1,749 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30B95A900CA67EE7CB9EEB63 /* Pods_HavadarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F727DC42D5A4E53693B1F7 /* Pods_HavadarTests.framework */; };
+		7590B3BC2CFF196600C7AF5A /* Pods_Havadar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B863C22251C2591B85C35E5A /* Pods_Havadar.framework */; };
+		7590B3BD2CFF196600C7AF5A /* Pods_Havadar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B863C22251C2591B85C35E5A /* Pods_Havadar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D39324915F869DFAF5EC4583 /* Pods_Havadar_HavadarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438EB6ABFF8F6DBCA948F43F /* Pods_Havadar_HavadarUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		752C20742CFDEDED007E9B56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 752C20552CFDEDEB007E9B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 752C205C2CFDEDEB007E9B56;
+			remoteInfo = Havadar;
+		};
+		752C207E2CFDEDED007E9B56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 752C20552CFDEDEB007E9B56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 752C205C2CFDEDEB007E9B56;
+			remoteInfo = Havadar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7590B3BE2CFF196600C7AF5A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7590B3BD2CFF196600C7AF5A /* Pods_Havadar.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04FA43454EAC46A180492F88 /* Pods-Havadar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Havadar.release.xcconfig"; path = "Target Support Files/Pods-Havadar/Pods-Havadar.release.xcconfig"; sourceTree = "<group>"; };
+		0505DDC073C01837A1FB8B1C /* Pods-Havadar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Havadar.debug.xcconfig"; path = "Target Support Files/Pods-Havadar/Pods-Havadar.debug.xcconfig"; sourceTree = "<group>"; };
+		40611D79CA5E5CD3B981A111 /* Pods-Havadar-HavadarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Havadar-HavadarUITests.release.xcconfig"; path = "Target Support Files/Pods-Havadar-HavadarUITests/Pods-Havadar-HavadarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		436A856C304A60A7FDA96CE6 /* Pods-HavadarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HavadarTests.release.xcconfig"; path = "Target Support Files/Pods-HavadarTests/Pods-HavadarTests.release.xcconfig"; sourceTree = "<group>"; };
+		438EB6ABFF8F6DBCA948F43F /* Pods_Havadar_HavadarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Havadar_HavadarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D5B5A7521562A06CCCE19B /* Pods-Havadar-HavadarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Havadar-HavadarUITests.debug.xcconfig"; path = "Target Support Files/Pods-Havadar-HavadarUITests/Pods-Havadar-HavadarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		752C205D2CFDEDEB007E9B56 /* Havadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Havadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		752C20732CFDEDED007E9B56 /* HavadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HavadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		752C207D2CFDEDED007E9B56 /* HavadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HavadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		855F9DDC797FD520FC83532B /* Pods-HavadarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HavadarTests.debug.xcconfig"; path = "Target Support Files/Pods-HavadarTests/Pods-HavadarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B863C22251C2591B85C35E5A /* Pods_Havadar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Havadar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F727DC42D5A4E53693B1F7 /* Pods_HavadarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HavadarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		752C20852CFDEDED007E9B56 /* Exceptions for "Havadar" folder in "Havadar" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 752C205C2CFDEDEB007E9B56 /* Havadar */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		752C205F2CFDEDEB007E9B56 /* Havadar */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				752C20852CFDEDED007E9B56 /* Exceptions for "Havadar" folder in "Havadar" target */,
+			);
+			path = Havadar;
+			sourceTree = "<group>";
+		};
+		752C20762CFDEDED007E9B56 /* HavadarTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HavadarTests;
+			sourceTree = "<group>";
+		};
+		752C20802CFDEDED007E9B56 /* HavadarUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HavadarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		752C205A2CFDEDEB007E9B56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7590B3BC2CFF196600C7AF5A /* Pods_Havadar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		752C20702CFDEDED007E9B56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30B95A900CA67EE7CB9EEB63 /* Pods_HavadarTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		752C207A2CFDEDED007E9B56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39324915F869DFAF5EC4583 /* Pods_Havadar_HavadarUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AE0F4DD20C5E580A6FAF3BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B863C22251C2591B85C35E5A /* Pods_Havadar.framework */,
+				438EB6ABFF8F6DBCA948F43F /* Pods_Havadar_HavadarUITests.framework */,
+				D5F727DC42D5A4E53693B1F7 /* Pods_HavadarTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BE5505F01175C56EDCF8EC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0505DDC073C01837A1FB8B1C /* Pods-Havadar.debug.xcconfig */,
+				04FA43454EAC46A180492F88 /* Pods-Havadar.release.xcconfig */,
+				57D5B5A7521562A06CCCE19B /* Pods-Havadar-HavadarUITests.debug.xcconfig */,
+				40611D79CA5E5CD3B981A111 /* Pods-Havadar-HavadarUITests.release.xcconfig */,
+				855F9DDC797FD520FC83532B /* Pods-HavadarTests.debug.xcconfig */,
+				436A856C304A60A7FDA96CE6 /* Pods-HavadarTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		752C20542CFDEDEB007E9B56 = {
+			isa = PBXGroup;
+			children = (
+				752C205F2CFDEDEB007E9B56 /* Havadar */,
+				752C20762CFDEDED007E9B56 /* HavadarTests */,
+				752C20802CFDEDED007E9B56 /* HavadarUITests */,
+				752C205E2CFDEDEB007E9B56 /* Products */,
+				5BE5505F01175C56EDCF8EC3 /* Pods */,
+				4AE0F4DD20C5E580A6FAF3BF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		752C205E2CFDEDEB007E9B56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				752C205D2CFDEDEB007E9B56 /* Havadar.app */,
+				752C20732CFDEDED007E9B56 /* HavadarTests.xctest */,
+				752C207D2CFDEDED007E9B56 /* HavadarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		752C205C2CFDEDEB007E9B56 /* Havadar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 752C20862CFDEDED007E9B56 /* Build configuration list for PBXNativeTarget "Havadar" */;
+			buildPhases = (
+				85642BD598529F651B9B1025 /* [CP] Check Pods Manifest.lock */,
+				752C20592CFDEDEB007E9B56 /* Sources */,
+				752C205A2CFDEDEB007E9B56 /* Frameworks */,
+				752C205B2CFDEDEB007E9B56 /* Resources */,
+				C75C6B1B08E8EA29D36C9ED1 /* [CP] Embed Pods Frameworks */,
+				7590B3BE2CFF196600C7AF5A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				752C205F2CFDEDEB007E9B56 /* Havadar */,
+			);
+			name = Havadar;
+			productName = Havadar;
+			productReference = 752C205D2CFDEDEB007E9B56 /* Havadar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		752C20722CFDEDED007E9B56 /* HavadarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 752C208B2CFDEDED007E9B56 /* Build configuration list for PBXNativeTarget "HavadarTests" */;
+			buildPhases = (
+				DEBB91AC521BD1A0BBE7671E /* [CP] Check Pods Manifest.lock */,
+				752C206F2CFDEDED007E9B56 /* Sources */,
+				752C20702CFDEDED007E9B56 /* Frameworks */,
+				752C20712CFDEDED007E9B56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				752C20752CFDEDED007E9B56 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				752C20762CFDEDED007E9B56 /* HavadarTests */,
+			);
+			name = HavadarTests;
+			productName = HavadarTests;
+			productReference = 752C20732CFDEDED007E9B56 /* HavadarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		752C207C2CFDEDED007E9B56 /* HavadarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 752C208E2CFDEDED007E9B56 /* Build configuration list for PBXNativeTarget "HavadarUITests" */;
+			buildPhases = (
+				4206403FE58A51834F6CEE36 /* [CP] Check Pods Manifest.lock */,
+				752C20792CFDEDED007E9B56 /* Sources */,
+				752C207A2CFDEDED007E9B56 /* Frameworks */,
+				752C207B2CFDEDED007E9B56 /* Resources */,
+				5146314D0CF8FA9189FA975F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				752C207F2CFDEDED007E9B56 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				752C20802CFDEDED007E9B56 /* HavadarUITests */,
+			);
+			name = HavadarUITests;
+			productName = HavadarUITests;
+			productReference = 752C207D2CFDEDED007E9B56 /* HavadarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		752C20552CFDEDEB007E9B56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					752C205C2CFDEDEB007E9B56 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					752C20722CFDEDED007E9B56 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 752C205C2CFDEDEB007E9B56;
+					};
+					752C207C2CFDEDED007E9B56 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 752C205C2CFDEDEB007E9B56;
+					};
+				};
+			};
+			buildConfigurationList = 752C20582CFDEDEB007E9B56 /* Build configuration list for PBXProject "Havadar" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 752C20542CFDEDEB007E9B56;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 752C205E2CFDEDEB007E9B56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				752C205C2CFDEDEB007E9B56 /* Havadar */,
+				752C20722CFDEDED007E9B56 /* HavadarTests */,
+				752C207C2CFDEDED007E9B56 /* HavadarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		752C205B2CFDEDEB007E9B56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		752C20712CFDEDED007E9B56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		752C207B2CFDEDED007E9B56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4206403FE58A51834F6CEE36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Havadar-HavadarUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5146314D0CF8FA9189FA975F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Havadar-HavadarUITests/Pods-Havadar-HavadarUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Havadar-HavadarUITests/Pods-Havadar-HavadarUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Havadar-HavadarUITests/Pods-Havadar-HavadarUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85642BD598529F651B9B1025 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Havadar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C75C6B1B08E8EA29D36C9ED1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Havadar/Pods-Havadar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Havadar/Pods-Havadar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Havadar/Pods-Havadar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEBB91AC521BD1A0BBE7671E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HavadarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		752C20592CFDEDEB007E9B56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		752C206F2CFDEDED007E9B56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		752C20792CFDEDED007E9B56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		752C20752CFDEDED007E9B56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 752C205C2CFDEDEB007E9B56 /* Havadar */;
+			targetProxy = 752C20742CFDEDED007E9B56 /* PBXContainerItemProxy */;
+		};
+		752C207F2CFDEDED007E9B56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 752C205C2CFDEDEB007E9B56 /* Havadar */;
+			targetProxy = 752C207E2CFDEDED007E9B56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		752C20872CFDEDED007E9B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0505DDC073C01837A1FB8B1C /* Pods-Havadar.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7U46JJ645;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Havadar/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = havadar.Havadar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		752C20882CFDEDED007E9B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04FA43454EAC46A180492F88 /* Pods-Havadar.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7U46JJ645;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Havadar/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = havadar.Havadar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		752C20892CFDEDED007E9B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		752C208A2CFDEDED007E9B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		752C208C2CFDEDED007E9B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855F9DDC797FD520FC83532B /* Pods-HavadarTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7U46JJ645;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = havadar.HavadarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Havadar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Havadar";
+			};
+			name = Debug;
+		};
+		752C208D2CFDEDED007E9B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 436A856C304A60A7FDA96CE6 /* Pods-HavadarTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7U46JJ645;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = havadar.HavadarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Havadar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Havadar";
+			};
+			name = Release;
+		};
+		752C208F2CFDEDED007E9B56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D5B5A7521562A06CCCE19B /* Pods-Havadar-HavadarUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7U46JJ645;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = havadar.HavadarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Havadar;
+			};
+			name = Debug;
+		};
+		752C20902CFDEDED007E9B56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40611D79CA5E5CD3B981A111 /* Pods-Havadar-HavadarUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7U46JJ645;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = havadar.HavadarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Havadar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		752C20582CFDEDEB007E9B56 /* Build configuration list for PBXProject "Havadar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				752C20892CFDEDED007E9B56 /* Debug */,
+				752C208A2CFDEDED007E9B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		752C20862CFDEDED007E9B56 /* Build configuration list for PBXNativeTarget "Havadar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				752C20872CFDEDED007E9B56 /* Debug */,
+				752C20882CFDEDED007E9B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		752C208B2CFDEDED007E9B56 /* Build configuration list for PBXNativeTarget "HavadarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				752C208C2CFDEDED007E9B56 /* Debug */,
+				752C208D2CFDEDED007E9B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		752C208E2CFDEDED007E9B56 /* Build configuration list for PBXNativeTarget "HavadarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				752C208F2CFDEDED007E9B56 /* Debug */,
+				752C20902CFDEDED007E9B56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 752C20552CFDEDEB007E9B56 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_Havadar {
+  umbrella header "Pods-Havadar-umbrella.h"
+
+  export *
+  module * { export * }
+}
