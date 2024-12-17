@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import Alamofire
-
 
 typealias NetworkCompletion<T: Decodable> = (Result<BaseResponse<T>, NetworkError>) -> Void
 typealias NetworkCompletionNoneResponse = (Result<BaseResponse<Never>, NetworkError>) -> Void

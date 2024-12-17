@@ -8,6 +8,8 @@
 import UIKit
 
 class FiveDaysWeatherCollectionViewCell: UICollectionViewCell {
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

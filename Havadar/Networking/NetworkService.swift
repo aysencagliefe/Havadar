@@ -9,9 +9,6 @@ import Foundation
 import Alamofire
 
 class NetworkService: NetworkServiceProtocol {
-    
-  
-    
     static let shared = NetworkService()
     
     var deviceToken = ""
@@ -25,6 +22,7 @@ class NetworkService: NetworkServiceProtocol {
     
     private init() { }
     
+    // MARK: - Methods
     func startNetworkReachabilityObserver() {
         reachabilityManager?.startListening(onUpdatePerforming: { [weak self] status in
             self?.reachabilityStatus = status
