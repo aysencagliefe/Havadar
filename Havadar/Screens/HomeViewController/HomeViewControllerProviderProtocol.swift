@@ -11,7 +11,7 @@ protocol HomeViewControllerProviderProtocol {
     
     func nowWeather(
         merkezid: String?,
-        completion: @escaping NetworkCompletion<NowWeatherResponse>
+        completion: @escaping NetworkCompletion<[NowWeatherResponseElement]>
     )
     
     func merkezlerWeather(

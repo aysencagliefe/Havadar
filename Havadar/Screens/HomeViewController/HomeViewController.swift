@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }()
     
     var merkezlerWeatherResponse: MerkezlerWeatherResponse?
-    var nowWeatherResponse: NowWeatherResponse?
+    var nowWeatherResponse: NowWeatherResponseElement?
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
@@ -56,7 +56,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             // Her hücreye özel boyut ayarı (örnek)
             switch indexPath.row {
             case 0:
-                return CGSize(width: collectionView.frame.width, height: 233)
+                return CGSize(width: collectionView.frame.width, height: 300)
             case 1:
                 return CGSize(width: collectionView.frame.width, height: 150)
             case 2:
@@ -66,7 +66,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
         }
         
-    func nowReceiveData(_data: NowWeatherResponse?) {
+    func nowReceiveData(_data: NowWeatherResponseElement?) {
         nowWeatherResponse = _data
         homeCollectionView.reloadData()
     }

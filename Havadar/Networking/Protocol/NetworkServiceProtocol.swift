@@ -7,8 +7,8 @@
 
 import Foundation
 
-typealias NetworkCompletion<T: Decodable> = (Result<BaseResponse<T>, NetworkError>) -> Void
-typealias NetworkCompletionNoneResponse = (Result<BaseResponse<Never>, NetworkError>) -> Void
+typealias NetworkCompletion<T: Decodable> = (Result<T, NetworkError>) -> Void
+typealias NetworkCompletionNoneResponse = (Result<Never, NetworkError>) -> Void
 
 protocol NetworkServiceProtocol: AnyObject {
     func executeRequest<T: NetworkRequestProtocol, U: Decodable>(

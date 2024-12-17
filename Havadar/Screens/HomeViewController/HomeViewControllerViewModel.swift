@@ -20,7 +20,7 @@ class HomeViewControllerViewModel {
     func nowWeather(merkezid: String?) {
         dataProvider.nowWeather(merkezid: merkezid) { result in
             do {
-                try self.delegate?.nowReceiveData(_data: result.get().data)
+                try self.delegate?.nowReceiveData(_data: result.get().first)
             } catch {
                 print("error nowWeather")
 
@@ -32,7 +32,7 @@ class HomeViewControllerViewModel {
     func merkezlerWeather(sorgu: String?, limit: String?) {
         dataProvider.merkezlerWeather(sorgu: sorgu, limit: limit) { result in
             do {
-                try self.delegate?.merkezlerReceiveData(_data: result.get().data)
+                try self.delegate?.merkezlerReceiveData(_data: result.get())
             } catch {
                 print("error merkezler")
             }
@@ -43,6 +43,6 @@ class HomeViewControllerViewModel {
 }
 
 protocol HomeViewControllerDelegate: AnyObject {
-    func nowReceiveData(_data: NowWeatherResponse?)
+    func nowReceiveData(_data: NowWeatherResponseElement?)
     func merkezlerReceiveData(_data: MerkezlerWeatherResponse?)
 }

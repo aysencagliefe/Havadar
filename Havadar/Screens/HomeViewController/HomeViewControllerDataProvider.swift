@@ -15,9 +15,9 @@ class HomeViewControllerDataProvider: HomeViewControllerProviderProtocol {
         self.networkService = networkService
     }
     
-    func nowWeather(merkezid: String?, completion: @escaping NetworkCompletion<NowWeatherResponse>) {
+    func nowWeather(merkezid: String?, completion: @escaping NetworkCompletion<[NowWeatherResponseElement]>) {
     
-        let url = "https://servis.mgm.gov.tr/web/sondurumlar/merkezid"
+        let url = "https://servis.mgm.gov.tr/web/sondurumlar"
         
         var urlComponents = URLComponents(string: url)!
         urlComponents.queryItems = [
@@ -30,7 +30,7 @@ class HomeViewControllerDataProvider: HomeViewControllerProviderProtocol {
             httpMethod: .get)
         networkService.executeRequest(
             request: request,
-            responseModelType: NowWeatherResponse.self,
+            responseModelType: [NowWeatherResponseElement].self,
             completion: completion)
     
     }

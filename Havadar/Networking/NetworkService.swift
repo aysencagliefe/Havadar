@@ -9,6 +9,9 @@ import Foundation
 import Alamofire
 
 class NetworkService: NetworkServiceProtocol {
+    
+  
+    
     static let shared = NetworkService()
     
     var deviceToken = ""
@@ -22,7 +25,6 @@ class NetworkService: NetworkServiceProtocol {
     
     private init() { }
     
-    // MARK: - Methods
     func startNetworkReachabilityObserver() {
         reachabilityManager?.startListening(onUpdatePerforming: { [weak self] status in
             self?.reachabilityStatus = status
@@ -90,7 +92,7 @@ class NetworkService: NetworkServiceProtocol {
         requestModel: T?,
         responseModelType: U.Type,
         isAuthNeeded: Bool,
-        completion: @escaping (Result<BaseResponse<U>, NetworkError>) -> Void
+        completion: @escaping (Result<U, NetworkError>) -> Void
     ) {
         let startTime = Date().timeIntervalSince1970
         debugPrint(" ")
@@ -113,7 +115,7 @@ class NetworkService: NetworkServiceProtocol {
                     debugPrint("Response: " + (String(data: data, encoding: .utf8) ?? "nil"))
                     
                     let jsonDecoder = JSONDecoder()
-                    let responseModel = try jsonDecoder.decode(BaseResponse<U>.self, from: data)
+                    let responseModel = try jsonDecoder.decode(U.self, from: data)
                     
                     // switch responseModel.status {
                     //case .success:
@@ -170,6 +172,10 @@ class NetworkService: NetworkServiceProtocol {
                 .authorization(bearerToken: token)
             ])
         }
-        return HTTPHeaders([.contentType("application/json")])
+        return HTTPHeaders([
+            .contentType("application/json"),
+            .init(name: "Origin", value: "https://mgm.gov.tr")
+
+        ])
     }
 }

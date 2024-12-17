@@ -37,10 +37,7 @@
                 <constraint firstItem="vHi-8h-rhh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ofb-OX-PJM"/>
             </constraints>
             <size key="customSize" width="317" height="84"/>
-            <connections>
-                <outlet property="todayCollectionView" destination="vHi-8h-rhh" id="tTp-PH-1PR"/>
-            </connections>
-            <point key="canvasLocation" x="220.28985507246378" y="-20.089285714285712"/>
+            <point key="canvasLocation" x="135" y="-3"/>
         </collectionViewCell>
     </objects>
 </document>

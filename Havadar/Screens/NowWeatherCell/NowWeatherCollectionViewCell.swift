@@ -20,20 +20,37 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pressureAirLabel: UILabel!
     
     
-    var nowWeatherResponse : NowWeatherResponse?
+    var nowWeatherResponse : NowWeatherResponseElement? {
+        didSet {
+            if let nowWeatherResponse {
+                cityNameLabel.text = "\(nowWeatherResponse.istNo)"
+                dateLabel.text = dateFormatter(dateString: nowWeatherResponse.veriZamani)
+                visualSkyLabel.image = UIImage(named: nowWeatherResponse.hadiseKodu)
+                temperatureLabel.text = String(nowWeatherResponse.sicaklik )
+                humidityLabel.text = String("Nem \(nowWeatherResponse.nem)")
+                windyLabel.text = String("Rüzgar \(nowWeatherResponse.ruzgarHiz)")
+                pressureAirLabel.text = String("Basınç \(nowWeatherResponse.aktuelBasinc)")
+            }
+        
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        if let nowWeatherResponse {
-            cityNameLabel.text = "\(nowWeatherResponse.istNo)"
-            dateLabel.text = nowWeatherResponse.veriZamani
-            visualSkyLabel.image = UIImage(named: nowWeatherResponse.hadiseKodu)
-            temperatureLabel.text = String(nowWeatherResponse.sicaklik)
-            humidityLabel.text = String(nowWeatherResponse.nem)
-            windyLabel.text = String(nowWeatherResponse.ruzgarHiz)
-            pressureAirLabel.text = String(nowWeatherResponse .aktuelBasinc)
-        }
-        
     }
-    
+
+    func dateFormatter(dateString: String) -> String {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" // Gelen API formatı
+
+        if let date = inputFormatter.date(from: dateString) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM HH:mm"
+        dateFormatter.locale = Locale(identifier: "tr_TR")
+        let formattedDate = dateFormatter.string(from: date)
+            return formattedDate
+        } else {
+            return ""
+        }
+    }
 }
