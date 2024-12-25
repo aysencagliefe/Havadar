@@ -29,6 +29,17 @@ class HomeViewControllerViewModel {
         
     }
     
+    func todayHourlyWeather(istno: String?) {
+        dataProvider.todayHourlyWeather(istno: istno) { result in
+            do {
+                try self.delegate?.todayHourlyReceiveData(_data: result.get().first)
+            } catch{
+                print("error todayHourly")
+            }
+        }
+    }
+    
+    
     func merkezlerWeather(sorgu: String?, limit: String?) {
         dataProvider.merkezlerWeather(sorgu: sorgu, limit: limit) { result in
             do {
@@ -44,5 +55,6 @@ class HomeViewControllerViewModel {
 
 protocol HomeViewControllerDelegate: AnyObject {
     func nowReceiveData(_data: NowWeatherResponseElement?)
+    func todayHourlyReceiveData(_data: TodayHourlyWeatherResponse?)
     func merkezlerReceiveData(_data: MerkezlerWeatherResponse?)
 }

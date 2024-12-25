@@ -7,23 +7,15 @@
 
 import Foundation
 
-struct TodayHourlyResponse: Codable {
+struct TodayHourlyWeatherResponse: Codable {
     let baslangicZamani: String
     let istNo: Int
     let merkez: String
     let tahmin: [Tahmin]
 }
 
-// MARK: - Tahmin
 struct Tahmin: Codable {
-    let tarih: String
-    let hadise: Hadise
+    let tarih, hadise: String
     let sicaklik, hissedilenSicaklik, nem, ruzgarYonu: Int
     let ruzgarHizi, maksimumRuzgarHizi: Int
-}
-
-enum Hadise: String, Codable {
-    case cb = "CB"
-    case pb = "PB"
-    case pus = "PUS"
 }

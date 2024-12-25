@@ -14,9 +14,15 @@ protocol HomeViewControllerProviderProtocol {
         completion: @escaping NetworkCompletion<[NowWeatherResponseElement]>
     )
     
+    func todayHourlyWeather(
+        istno: String?,
+        completion: @escaping NetworkCompletion<[TodayHourlyWeatherResponse]>
+    )
+    
     func merkezlerWeather(
         sorgu: String?,
         limit: String?,
         completion: @escaping NetworkCompletion<MerkezlerWeatherResponse>
     )
+    
 }

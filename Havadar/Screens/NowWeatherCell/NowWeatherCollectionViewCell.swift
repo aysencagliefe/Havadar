@@ -9,6 +9,7 @@ import UIKit
 
 class NowWeatherCollectionViewCell: UICollectionViewCell {
 
+    weak var delegate: NowWeatherCollectionViewCellDelegate?
     
     @IBOutlet weak var nowWeatherView: UIView!
     @IBOutlet weak var cityNameLabel: UILabel!
@@ -27,17 +28,22 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
                 dateLabel.text = dateFormatter(dateString: nowWeatherResponse.veriZamani)
                 visualSkyLabel.image = UIImage(named: nowWeatherResponse.hadiseKodu)
                 temperatureLabel.text = String(nowWeatherResponse.sicaklik )
-                humidityLabel.text = String("Nem \(nowWeatherResponse.nem)")
-                windyLabel.text = String("Rüzgar \(nowWeatherResponse.ruzgarHiz)")
+                humidityLabel.text =    String("Nem    \(nowWeatherResponse.nem)")
+                windyLabel.text =       String("Rüzgar    \(nowWeatherResponse.ruzgarHiz)")
                 pressureAirLabel.text = String("Basınç \(nowWeatherResponse.aktuelBasinc)")
             }
-        
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    @IBAction func addSelectCenterButton(_ sender: UIButton) {
+        delegate?.didTapAddButton(in: self)
+
+    }
+    
 
     func dateFormatter(dateString: String) -> String {
         let inputFormatter = DateFormatter()
@@ -53,4 +59,8 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
             return ""
         }
     }
+}
+
+protocol NowWeatherCollectionViewCellDelegate: AnyObject {
+    func didTapAddButton(in cell: NowWeatherCollectionViewCell)
 }

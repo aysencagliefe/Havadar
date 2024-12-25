@@ -29,7 +29,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="G" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-IQ-BmX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-IQ-BmX">
                                 <rect key="frame" x="26" y="70.5" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="73k-ji-UrE"/>
@@ -56,15 +56,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basınç" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-xT-oRH">
-                                <rect key="frame" x="300" y="201.5" width="50.5" height="36.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="OCp-c2-fIj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarih /Saat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-nm-lEL">
                                 <rect key="frame" x="113" y="70.5" width="179" height="17"/>
                                 <constraints>
@@ -75,10 +66,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rüzgar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-DI-1Mh">
-                                <rect key="frame" x="175" y="206.5" width="54" height="23.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rüzgar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-DI-1Mh">
+                                <rect key="frame" x="166" y="204" width="62" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="HGe-ex-bxI"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="62" id="HGe-ex-bxI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUg-V5-eDD">
+                                <rect key="frame" x="349" y="8" width="30" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ELX-QT-kVJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSelectCenterButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ccX-Wo-MYU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Basınç" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-xT-oRH">
+                                <rect key="frame" x="288" y="204" width="63" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="63" id="OCp-c2-fIj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -93,18 +107,20 @@
                             <constraint firstItem="Db9-Df-O6a" firstAttribute="top" secondItem="1sl-IQ-BmX" secondAttribute="bottom" constant="55" id="D4q-AL-7d1"/>
                             <constraint firstItem="aAT-TH-oeD" firstAttribute="centerX" secondItem="Ni9-0i-n8c" secondAttribute="centerX" constant="5" id="Fhs-Bx-aZp"/>
                             <constraint firstItem="uvN-or-pQD" firstAttribute="top" secondItem="XAQ-nm-lEL" secondAttribute="bottom" constant="42" id="I6v-XP-3JY"/>
-                            <constraint firstItem="Db9-Df-O6a" firstAttribute="centerY" secondItem="tZd-xT-oRH" secondAttribute="centerY" id="I8w-hu-agh"/>
+                            <constraint firstItem="Db9-Df-O6a" firstAttribute="centerY" secondItem="tZd-xT-oRH" secondAttribute="centerY" constant="1.25" id="I8w-hu-agh"/>
                             <constraint firstItem="1sl-IQ-BmX" firstAttribute="top" secondItem="XAQ-nm-lEL" secondAttribute="top" id="O23-Rm-Nnc"/>
                             <constraint firstItem="aAT-TH-oeD" firstAttribute="centerX" secondItem="XAQ-nm-lEL" secondAttribute="centerX" constant="-0.5" id="O9A-gv-ldB"/>
-                            <constraint firstAttribute="bottom" secondItem="bPc-DI-1Mh" secondAttribute="bottom" constant="50" id="QwX-WO-cs0"/>
-                            <constraint firstItem="uvN-or-pQD" firstAttribute="centerX" secondItem="bPc-DI-1Mh" secondAttribute="centerX" id="R4B-Hv-CaA"/>
-                            <constraint firstItem="bPc-DI-1Mh" firstAttribute="top" secondItem="uvN-or-pQD" secondAttribute="bottom" constant="47" id="TgX-YX-Wm4"/>
+                            <constraint firstAttribute="bottom" secondItem="bPc-DI-1Mh" secondAttribute="bottom" constant="47" id="QwX-WO-cs0"/>
+                            <constraint firstItem="uvN-or-pQD" firstAttribute="centerX" secondItem="bPc-DI-1Mh" secondAttribute="centerX" constant="5" id="R4B-Hv-CaA"/>
+                            <constraint firstItem="bPc-DI-1Mh" firstAttribute="top" secondItem="uvN-or-pQD" secondAttribute="bottom" constant="44.5" id="TgX-YX-Wm4"/>
                             <constraint firstItem="XAQ-nm-lEL" firstAttribute="leading" secondItem="1sl-IQ-BmX" secondAttribute="trailing" constant="3" id="Thv-Rg-Gap"/>
+                            <constraint firstItem="mUg-V5-eDD" firstAttribute="top" secondItem="Ni9-0i-n8c" secondAttribute="top" constant="8" id="YQB-OU-jfq"/>
                             <constraint firstItem="1sl-IQ-BmX" firstAttribute="top" secondItem="aAT-TH-oeD" secondAttribute="bottom" constant="28.5" id="g15-pn-k7Q"/>
-                            <constraint firstItem="bPc-DI-1Mh" firstAttribute="baseline" secondItem="tZd-xT-oRH" secondAttribute="baseline" constant="-8" id="hhr-Yx-T6r"/>
-                            <constraint firstItem="tZd-xT-oRH" firstAttribute="centerX" secondItem="uvN-or-pQD" secondAttribute="centerX" constant="123" id="jh0-cp-Peh"/>
+                            <constraint firstItem="bPc-DI-1Mh" firstAttribute="baseline" secondItem="tZd-xT-oRH" secondAttribute="baseline" id="hhr-Yx-T6r"/>
+                            <constraint firstItem="tZd-xT-oRH" firstAttribute="centerX" secondItem="uvN-or-pQD" secondAttribute="centerX" constant="117.5" id="jh0-cp-Peh"/>
                             <constraint firstAttribute="bottom" secondItem="Db9-Df-O6a" secondAttribute="bottom" constant="50" id="lUQ-BT-S2u"/>
                             <constraint firstItem="Db9-Df-O6a" firstAttribute="centerX" secondItem="1sl-IQ-BmX" secondAttribute="centerX" id="mho-AX-a1b"/>
+                            <constraint firstAttribute="trailing" secondItem="mUg-V5-eDD" secondAttribute="trailing" constant="15" id="sPW-E5-lEJ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -149,6 +165,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="G" width="20" height="20"/>
+        <image name="A" width="20" height="20"/>
     </resources>
 </document>

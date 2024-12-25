@@ -8,6 +8,7 @@
 import Foundation
 
 class HomeViewControllerDataProvider: HomeViewControllerProviderProtocol {
+    
    
     let networkService: NetworkServiceProtocol
     
@@ -33,6 +34,26 @@ class HomeViewControllerDataProvider: HomeViewControllerProviderProtocol {
             responseModelType: [NowWeatherResponseElement].self,
             completion: completion)
     
+    }
+    
+    func todayHourlyWeather(istno: String?, completion: @escaping NetworkCompletion<[TodayHourlyWeatherResponse]>) {
+    
+        
+        let url = "https://servis.mgm.gov.tr/web/tahminler/saatlik"
+        
+        var urlComponents = URLComponents(string: url)!
+        urlComponents.queryItems = [
+            URLQueryItem(name: "istno", value: istno)
+        ]
+        guard let urlString = urlComponents.url?.absoluteString else { return }
+        
+        let request = NetworkUrlRequest(
+            url: urlString,
+            httpMethod: .get)
+        networkService.executeRequest(
+            request: request,
+            responseModelType: [TodayHourlyWeatherResponse].self,
+            completion: completion)
     }
     
     func merkezlerWeather(sorgu: String?, limit: String?, completion: @escaping NetworkCompletion<MerkezlerWeatherResponse>) {

@@ -8,7 +8,7 @@
 import Foundation
 
 struct NowWeatherResponseElement: Codable {
-    let  denizSicaklik, gorus: Int
+        let  denizSicaklik, gorus: Int
         let hadiseKodu: String
         let istNo, kapalilik, karYukseklik, nem: Int
         let rasatMetar, rasatSinoptik, rasatTaf: String

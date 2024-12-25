@@ -7,23 +7,37 @@
 
 import UIKit
 
-class TodayHourlyWeatherCollectionViewCell: UICollectionViewCell {
-   
-    @IBOutlet weak var temperatureLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var skyImage: UIImageView!
-    @IBOutlet weak var backgraundContainer: UIView!
-    @IBOutlet weak var todayCollectionView: UICollectionView!
+class TodayHourlyWeatherCollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBOutlet weak var todayHourlyCollectionView: UICollectionView!
+    
+    var todayHourlyResponse : TodayHourlyWeatherResponse? {
+        didSet {
+            if let todayHourlyResponse {
+                todayHourlyCollectionView.reloadData()
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        /*
-        backgraundContainer.layer.cornerRadius = 10
-        backgraundContainer.layer.borderWidth = 1
-        backgraundContainer.layer.borderColor = UIColor.lightGray.cgColor
-        backgraundContainer.backgroundColor = UIColor.clear
-        */
+        todayHourlyCollectionView.delegate = self
+        todayHourlyCollectionView.dataSource = self
+        todayHourlyCollectionView.register(UINib(nibName: "HourlyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HourlyCollectionViewCell")
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return todayHourlyResponse?.tahmin.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HourlyCollectionViewCell", for: indexPath) as! HourlyCollectionViewCell
+        cell.hourlyGuess = todayHourlyResponse?.tahmin[indexPath.row]
+        return cell
+        
     }
 
    
 }
+
