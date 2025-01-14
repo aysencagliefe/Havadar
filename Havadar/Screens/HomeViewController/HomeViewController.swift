@@ -9,7 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewControllerDelegate, NowWeatherCollectionViewCellDelegate {
     
-    
     var viewModel: HomeViewControllerViewModel = {
         HomeViewControllerViewModel(
             dataProvider: HomeViewControllerDataProvider())
@@ -18,6 +17,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var merkezlerWeatherResponse: MerkezlerWeatherResponse?
     var nowWeatherResponse: NowWeatherResponseElement?
     var todayHourlyResponse: TodayHourlyWeatherResponse?
+    var fiveDaysResponse: FiveDaysWeatherResponse?
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
@@ -32,6 +32,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         homeCollectionView.register(UINib(nibName: "FiveDaysWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FiveDaysWeatherCell")
         viewModel.nowWeather(merkezid: "93401")
         viewModel.todayHourlyWeather(istno: "17130")
+        viewModel.fiveDaysWeather(istno: "90401")
     }
    
     
@@ -53,6 +54,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             return cell
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FiveDaysWeatherCell", for: indexPath) as! FiveDaysWeatherCollectionViewCell
+            cell.fiveDaysResponse = fiveDaysResponse
             return cell
         default:
             fatalError()
@@ -63,11 +65,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             // Her hücreye özel boyut ayarı (örnek)
             switch indexPath.row {
             case 0:
-                return CGSize(width: collectionView.frame.width, height: 300)
+                return CGSize(width: collectionView.frame.width, height: 325)
             case 1:
                 return CGSize(width: collectionView.frame.width, height: 150)
             case 2:
-                return CGSize(width: collectionView.frame.width, height: 360)
+                return CGSize(width: collectionView.frame.width, height: 385)
             default:
                 return CGSize.zero
             }
@@ -83,6 +85,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         homeCollectionView.reloadData()
         
     }
+    func fiveDaysReceiveData(_data: FiveDaysWeatherResponse?) {
+        fiveDaysResponse = _data
+        homeCollectionView.reloadData()
+    }
+    
     
     func merkezlerReceiveData(_data: MerkezlerWeatherResponse?) {
         merkezlerWeatherResponse = _data

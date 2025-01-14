@@ -27,7 +27,7 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
                 cityNameLabel.text = "\(nowWeatherResponse.istNo)"
                 dateLabel.text = dateFormatter(dateString: nowWeatherResponse.veriZamani)
                 visualSkyLabel.image = UIImage(named: nowWeatherResponse.hadiseKodu)
-                temperatureLabel.text = String(nowWeatherResponse.sicaklik )
+                temperatureLabel.text = String("\(nowWeatherResponse.sicaklik )°C")
                 humidityLabel.text =    String("Nem    \(nowWeatherResponse.nem)")
                 windyLabel.text =       String("Rüzgar    \(nowWeatherResponse.ruzgarHiz)")
                 pressureAirLabel.text = String("Basınç \(nowWeatherResponse.aktuelBasinc)")
@@ -37,6 +37,7 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     @IBAction func addSelectCenterButton(_ sender: UIButton) {

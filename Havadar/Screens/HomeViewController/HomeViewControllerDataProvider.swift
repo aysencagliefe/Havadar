@@ -56,6 +56,26 @@ class HomeViewControllerDataProvider: HomeViewControllerProviderProtocol {
             completion: completion)
     }
     
+    func fiveDaysWeather(istno: String?, completion: @escaping NetworkCompletion<[FiveDaysWeatherResponse]>) {
+        
+        let url = "https://servis.mgm.gov.tr/web/tahminler/gunluk"
+        
+        var urlComponents = URLComponents(string: url)!
+        urlComponents.queryItems = [
+            URLQueryItem(name: "istno", value: istno)
+        ]
+        guard let urlString = urlComponents.url?.absoluteString else { return }
+        
+        let request = NetworkUrlRequest(
+            url: urlString,
+            httpMethod: .get)
+        networkService.executeRequest(
+            request: request,
+            responseModelType: [FiveDaysWeatherResponse].self,
+            completion: completion)
+    }
+    
+    
     func merkezlerWeather(sorgu: String?, limit: String?, completion: @escaping NetworkCompletion<MerkezlerWeatherResponse>) {
         
         let url = "https://servis.mgm.gov.tr/web/merkezler"
