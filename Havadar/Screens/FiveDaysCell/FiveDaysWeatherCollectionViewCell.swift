@@ -17,11 +17,11 @@ class FiveDaysWeatherCollectionViewCell: UICollectionViewCell {
             dayLabel3.text = dateFormatter(dateString:fiveDaysResponse.tarihGun3)
             dayLabel4.text = dateFormatter(dateString:fiveDaysResponse.tarihGun4)
             dayLabel5.text = dateFormatter(dateString:fiveDaysResponse.tarihGun5)
-            lowestTemperature1.text = String("Düşük \(fiveDaysResponse.enDusukGun1 )°C -")
-            lowestTemperature2.text = String("Düşük \(fiveDaysResponse.enDusukGun2 )°C -")
-            lowestTemperature3.text = String("Düşük \(fiveDaysResponse.enDusukGun3 )°C -")
-            lowestTemperature4.text = String("Düşük \(fiveDaysResponse.enDusukGun4 )°C -")
-            lowestTemperature5.text = String("Düşük \(fiveDaysResponse.enDusukGun5 )°C -")
+            lowestTemperature1.text = String("Düşük \(fiveDaysResponse.enDusukGun1 )°C - ")
+            lowestTemperature2.text = String("Düşük \(fiveDaysResponse.enDusukGun2 )°C - ")
+            lowestTemperature3.text = String("Düşük \(fiveDaysResponse.enDusukGun3 )°C - ")
+            lowestTemperature4.text = String("Düşük \(fiveDaysResponse.enDusukGun4 )°C - ")
+            lowestTemperature5.text = String("Düşük \(fiveDaysResponse.enDusukGun5 )°C - ")
             highestTemperature1.text = String("Yüksek \(fiveDaysResponse.enYuksekGun1 )°C")
             highestTemperature2.text = String("Yüksek \(fiveDaysResponse.enYuksekGun2 )°C")
             highestTemperature3.text = String("Yüksek \(fiveDaysResponse.enYuksekGun3 )°C")
@@ -36,6 +36,7 @@ class FiveDaysWeatherCollectionViewCell: UICollectionViewCell {
     }
     
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var fiveDayView1: UIView!
     @IBOutlet weak var fiveDayView2: UIView!
     @IBOutlet weak var fiveDayView3: UIView!
@@ -66,7 +67,7 @@ class FiveDaysWeatherCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
+        //titleLabel.setupCardView()
         fiveDayView1.setupCardView()
         fiveDayView2.setupCardView()
         fiveDayView3.setupCardView()
@@ -77,11 +78,12 @@ class FiveDaysWeatherCollectionViewCell: UICollectionViewCell {
     
     func dateFormatter(dateString: String) -> String {
         let inputFormatter = DateFormatter()
-        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" // Gelen API formatı
-
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        inputFormatter.locale = Locale(identifier: "en_US_POSIX")
+        
         if let date = inputFormatter.date(from: dateString) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMMM"
+        dateFormatter.dateFormat = "dd MMMM EEEE"
         dateFormatter.locale = Locale(identifier: "tr_TR")
         let formattedDate = dateFormatter.string(from: date)
             return formattedDate
@@ -89,5 +91,22 @@ class FiveDaysWeatherCollectionViewCell: UICollectionViewCell {
             return ""
         }
     }
+    
+    func getDayOfWeek(from dateString: String, with format: String) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+
+        if let date = dateFormatter.date(from: dateString) {
+            let dayFormatter = DateFormatter()
+            dayFormatter.dateFormat = "EEEE"
+            dayFormatter.locale = Locale(identifier: "tr_TR")
+            return dayFormatter.string(from: date)
+        }
+        return nil
+    }
+    
+
+
 
 }

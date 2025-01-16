@@ -69,7 +69,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             case 1:
                 return CGSize(width: collectionView.frame.width, height: 150)
             case 2:
-                return CGSize(width: collectionView.frame.width, height: 385)
+                return CGSize(width: collectionView.frame.width, height: 420)
             default:
                 return CGSize.zero
             }
