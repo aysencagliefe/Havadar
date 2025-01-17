@@ -14,7 +14,7 @@ extension UIView {
         // Köşeleri yuvarlat
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = false
-        
+
         /*
         // Gölge ekle
         self.layer.shadowColor = UIColor.black.cgColor
