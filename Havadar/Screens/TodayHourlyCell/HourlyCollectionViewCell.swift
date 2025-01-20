@@ -35,6 +35,7 @@ class HourlyCollectionViewCell: UICollectionViewCell {
     func dateFormatter(dateString: String) -> String {
         let inputFormatter = DateFormatter()
         inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        inputFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         if let date = inputFormatter.date(from: dateString) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"

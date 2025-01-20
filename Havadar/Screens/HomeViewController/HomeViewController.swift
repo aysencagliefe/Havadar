@@ -18,22 +18,25 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var nowWeatherResponse: NowWeatherResponseElement?
     var todayHourlyResponse: TodayHourlyWeatherResponse?
     var fiveDaysResponse: FiveDaysWeatherResponse?
+    let refreshControl = UIRefreshControl()
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //homeCollectionView.applyGradient()
+        setupCollectionView()
+        setupPullToRefresh()
         viewModel.delegate = self
         homeCollectionView.delegate = self
         homeCollectionView.dataSource = self
         homeCollectionView.register(UINib(nibName: "NowWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NowWeatherCell")
         homeCollectionView.register(UINib(nibName: "TodayHourlyWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TodayHourlyWeatherCell")
         homeCollectionView.register(UINib(nibName: "FiveDaysWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FiveDaysWeatherCell")
-        viewModel.nowWeather(merkezid: "93401")
+        viewModel.nowWeather(merkezid: "90601")
         viewModel.todayHourlyWeather(istno: "17130")
-        viewModel.fiveDaysWeather(istno: "90401")
+        viewModel.fiveDaysWeather(istno: "90601")
     }
+    
    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -45,8 +48,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NowWeatherCell", for: indexPath) as! NowWeatherCollectionViewCell
             cell.nowWeatherResponse = nowWeatherResponse
-            cell.delegate = self 
-
+            cell.delegate = self
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayHourlyWeatherCell", for: indexPath) as! TodayHourlyWeatherCollectionViewCell
@@ -62,10 +64,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            // Her hücreye özel boyut ayarı (örnek)
             switch indexPath.row {
             case 0:
-                return CGSize(width: collectionView.frame.width, height: 325)
+                return CGSize(width: collectionView.frame.width, height: 350)
             case 1:
                 return CGSize(width: collectionView.frame.width, height: 150)
             case 2:
@@ -74,18 +75,38 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 return CGSize.zero
             }
         }
+    
+    private func setupCollectionView() {
+            homeCollectionView.delegate = self
+            homeCollectionView.dataSource = self
+       }
+
+    private func setupPullToRefresh() {
+           refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+            homeCollectionView.refreshControl = refreshControl
+       }
+
+       @objc private func refreshData() {
+           viewModel.nowWeather(merkezid: "90601")
+           viewModel.todayHourlyWeather(istno: "17130")
+           viewModel.fiveDaysWeather(istno: "90601")
+
+       }
         
     func nowReceiveData(_data: NowWeatherResponseElement?) {
+        self.refreshControl.endRefreshing()
         nowWeatherResponse = _data
         homeCollectionView.reloadData()
     }
     
     func todayHourlyReceiveData(_data: TodayHourlyWeatherResponse?) {
+        self.refreshControl.endRefreshing()
         todayHourlyResponse = _data
         homeCollectionView.reloadData()
         
     }
     func fiveDaysReceiveData(_data: FiveDaysWeatherResponse?) {
+        self.refreshControl.endRefreshing()
         fiveDaysResponse = _data
         homeCollectionView.reloadData()
     }

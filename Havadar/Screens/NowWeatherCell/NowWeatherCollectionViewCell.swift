@@ -28,15 +28,16 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
                 dateLabel.text = dateFormatter(dateString: nowWeatherResponse.veriZamani)
                 visualSkyLabel.image = UIImage(named: nowWeatherResponse.hadiseKodu)
                 temperatureLabel.text = String("\(nowWeatherResponse.sicaklik )°C")
-                humidityLabel.text =    String("Nem    \(nowWeatherResponse.nem)")
-                windyLabel.text =       String("Rüzgar    \(nowWeatherResponse.ruzgarHiz)")
-                pressureAirLabel.text = String("Basınç \(nowWeatherResponse.aktuelBasinc)")
+                humidityLabel.text =    String("Nem: %\(nowWeatherResponse.nem)")
+                windyLabel.text =       String("Rüzgar: \(nowWeatherResponse.ruzgarHiz.toFormattedString(withDecimalPlaces: 2)) km/sa")
+                pressureAirLabel.text = String("Basınç: \(nowWeatherResponse.aktuelBasinc) hPa")
             }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        nowWeatherView.setupCardView()
         
     }
     
@@ -49,6 +50,7 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
     func dateFormatter(dateString: String) -> String {
         let inputFormatter = DateFormatter()
         inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" // Gelen API formatı
+        inputFormatter.timeZone = TimeZone(secondsFromGMT: 0)
 
         if let date = inputFormatter.date(from: dateString) {
         let dateFormatter = DateFormatter()
@@ -60,6 +62,7 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
             return ""
         }
     }
+   
 }
 
 protocol NowWeatherCollectionViewCellDelegate: AnyObject {

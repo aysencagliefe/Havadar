@@ -24,7 +24,6 @@ class TodayHourlyWeatherCollectionViewCell: UICollectionViewCell, UICollectionVi
         todayHourlyCollectionView.delegate = self
         todayHourlyCollectionView.dataSource = self
         todayHourlyCollectionView.register(UINib(nibName: "HourlyCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HourlyCollectionViewCell")
-
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
