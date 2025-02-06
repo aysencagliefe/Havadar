@@ -76,25 +76,7 @@ class HomeViewControllerDataProvider: HomeViewControllerProviderProtocol {
     }
     
     
-    func merkezlerWeather(sorgu: String?, limit: String?, completion: @escaping NetworkCompletion<MerkezlerWeatherResponse>) {
-        
-        let url = "https://servis.mgm.gov.tr/web/merkezler"
-        
-        var urlComponents = URLComponents(string: url)!
-        urlComponents.queryItems = [
-            URLQueryItem(name: "sorgu", value: sorgu),
-            URLQueryItem(name: "limit", value: limit)
-        ]
-        guard let urlString = urlComponents.url?.absoluteString else { return }
-        
-        let request = NetworkUrlRequest(
-            url: urlString,
-            httpMethod: .get)
-        networkService.executeRequest(
-            request: request,
-            responseModelType: MerkezlerWeatherResponse.self,
-            completion: completion)
+  
     
-
-    }
+    
 }

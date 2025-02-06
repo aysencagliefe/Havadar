@@ -24,10 +24,8 @@ protocol HomeViewControllerProviderProtocol {
     completion: @escaping NetworkCompletion<[FiveDaysWeatherResponse]>
     )
     
-    func merkezlerWeather(
-        sorgu: String?,
-        limit: String?,
-        completion: @escaping NetworkCompletion<MerkezlerWeatherResponse>
-    )
+    
+    
+    
     
 }

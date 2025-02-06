@@ -14,7 +14,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             dataProvider: HomeViewControllerDataProvider())
     }()
     
-    var merkezlerWeatherResponse: MerkezlerWeatherResponse?
     var nowWeatherResponse: NowWeatherResponseElement?
     var todayHourlyResponse: TodayHourlyWeatherResponse?
     var fiveDaysResponse: FiveDaysWeatherResponse?
@@ -32,11 +31,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         homeCollectionView.register(UINib(nibName: "NowWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NowWeatherCell")
         homeCollectionView.register(UINib(nibName: "TodayHourlyWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TodayHourlyWeatherCell")
         homeCollectionView.register(UINib(nibName: "FiveDaysWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FiveDaysWeatherCell")
-        viewModel.nowWeather(merkezid: "90601")
-        viewModel.todayHourlyWeather(istno: "17130")
-        viewModel.fiveDaysWeather(istno: "90601")
+    
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let selectedCity = UserDefaults.standard.selectedCity
+        viewModel.nowWeather(merkezid: String(describing: selectedCity?.merkezID ?? 0))
+        viewModel.todayHourlyWeather(istno: String(describing: selectedCity?.saatlikTahminIstNo ?? 0))
+        viewModel.fiveDaysWeather(istno: String(describing: selectedCity?.gunlukTahminIstNo ?? 0))
+    }
    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -48,6 +51,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NowWeatherCell", for: indexPath) as! NowWeatherCollectionViewCell
             cell.nowWeatherResponse = nowWeatherResponse
+            cell.selectedCity = UserDefaults.standard.selectedCity
             cell.delegate = self
             return cell
         case 1:
@@ -87,10 +91,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
        }
 
        @objc private func refreshData() {
-           viewModel.nowWeather(merkezid: "90601")
-           viewModel.todayHourlyWeather(istno: "17130")
-           viewModel.fiveDaysWeather(istno: "90601")
-
+           let selectedCity = UserDefaults.standard.selectedCity
+           viewModel.nowWeather(merkezid: String(describing: selectedCity?.merkezID ?? 0))
+           viewModel.todayHourlyWeather(istno: String(describing: selectedCity?.saatlikTahminIstNo ?? 0))
+           viewModel.fiveDaysWeather(istno: String(describing: selectedCity?.gunlukTahminIstNo ?? 0))
        }
         
     func nowReceiveData(_data: NowWeatherResponseElement?) {
@@ -111,17 +115,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         homeCollectionView.reloadData()
     }
     
-    
-    func merkezlerReceiveData(_data: MerkezlerWeatherResponse?) {
-        merkezlerWeatherResponse = _data
-        homeCollectionView.reloadData()
+    func didTapSavedButton(in cell: NowWeatherCollectionViewCell) {
+        let savedCityVC = SavedCitiesViewController(nibName: "SavedCitiesViewController", bundle: nil)
+            present(savedCityVC, animated: true, completion: nil)
+        
     }
     
-    func didTapAddButton(in cell: NowWeatherCollectionViewCell) {
-        let selectCenterVC = SelectCenterViewController(nibName: "SelectCenterViewController", bundle: nil)
-             present(selectCenterVC, animated: true, completion: nil)
-    }
-     
-    
-   
 }
+

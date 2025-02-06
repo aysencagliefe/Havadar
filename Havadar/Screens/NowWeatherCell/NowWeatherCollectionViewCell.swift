@@ -19,6 +19,13 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var windyLabel: UILabel!
     @IBOutlet weak var pressureAirLabel: UILabel!
+    var selectedCity: SearchCitiesResponse? {
+        didSet {
+            if let selectedCity {
+                cityNameLabel.text = selectedCity.il
+            }
+        }
+    }
     
     
     var nowWeatherResponse : NowWeatherResponseElement? {
@@ -38,13 +45,12 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         nowWeatherView.setupCardView()
-        
     }
     
-    @IBAction func addSelectCenterButton(_ sender: UIButton) {
-        delegate?.didTapAddButton(in: self)
-
+    @IBAction func savedCitiesButton(_ sender: Any) {
+        delegate?.didTapSavedButton(in: self)
     }
+   
     
 
     func dateFormatter(dateString: String) -> String {
@@ -66,5 +72,5 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
 }
 
 protocol NowWeatherCollectionViewCellDelegate: AnyObject {
-    func didTapAddButton(in cell: NowWeatherCollectionViewCell)
+    func didTapSavedButton(in cell: NowWeatherCollectionViewCell)
 }

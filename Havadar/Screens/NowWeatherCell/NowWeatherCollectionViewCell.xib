@@ -24,23 +24,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Şehir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAT-TH-oeD">
                                 <rect key="frame" x="16" y="20" width="185" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="MgG-q9-6gb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="MgG-q9-6gb"/>
                                     <constraint firstAttribute="height" constant="26" id="OMb-bl-SFm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUg-V5-eDD">
-                                <rect key="frame" x="341.5" y="20" width="34.5" height="26"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <buttonConfiguration key="configuration" style="plain" title="+"/>
-                                <connections>
-                                    <action selector="addSelectCenterButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ccX-Wo-MYU"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="A" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-IQ-BmX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-IQ-BmX">
                                 <rect key="frame" x="26" y="90" width="57" height="88"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oP1-k4-din">
@@ -129,23 +120,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSD-bD-7Nd">
+                                <rect key="frame" x="156" y="17" width="45" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="KcH-ui-z05"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="dropDown">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="savedCitiesButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="76Z-Jg-Hkc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laZ-Xx-cbG">
+                                <rect key="frame" x="324" y="17" width="58" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="alarm"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oP1-k4-din" secondAttribute="trailing" constant="10" id="1Le-V7-AQF"/>
                             <constraint firstItem="oP1-k4-din" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="10" id="5e3-7K-zMO"/>
+                            <constraint firstItem="jSD-bD-7Nd" firstAttribute="trailing" secondItem="aAT-TH-oeD" secondAttribute="trailing" id="7ws-Me-6Ry"/>
                             <constraint firstItem="oP1-k4-din" firstAttribute="top" secondItem="loR-mz-xRp" secondAttribute="bottom" constant="40" id="CHb-4l-BKh"/>
+                            <constraint firstItem="loR-mz-xRp" firstAttribute="top" secondItem="jSD-bD-7Nd" secondAttribute="bottom" constant="35" id="DPJ-pR-59w"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="centerX" secondItem="oP1-k4-din" secondAttribute="centerX" id="GZG-oh-DbT"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="135" id="IhG-t3-ZhW"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="centerY" secondItem="1sl-IQ-BmX" secondAttribute="centerY" id="Olk-xC-lsr"/>
-                            <constraint firstItem="aAT-TH-oeD" firstAttribute="bottom" secondItem="mUg-V5-eDD" secondAttribute="bottom" id="RyD-aw-gWD"/>
+                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="26" id="Xzg-4K-jhJ"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="leading" secondItem="1sl-IQ-BmX" secondAttribute="trailing" constant="52" id="Y3n-oR-gUm"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="centerY" secondItem="Ni9-0i-n8c" secondAttribute="centerY" constant="-25" id="YYe-pD-yoh"/>
                             <constraint firstAttribute="bottom" secondItem="oP1-k4-din" secondAttribute="bottom" constant="20" id="ZGr-da-hdR"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="top" secondItem="aAT-TH-oeD" secondAttribute="bottom" constant="38" id="bJw-HL-lfO"/>
                             <constraint firstItem="aAT-TH-oeD" firstAttribute="top" secondItem="Ni9-0i-n8c" secondAttribute="top" constant="20" id="jOG-j5-MEF"/>
-                            <constraint firstItem="aAT-TH-oeD" firstAttribute="top" secondItem="mUg-V5-eDD" secondAttribute="top" id="mxC-4q-pUy"/>
-                            <constraint firstAttribute="trailing" secondItem="mUg-V5-eDD" secondAttribute="trailing" constant="14" id="xnq-tW-5YN"/>
+                            <constraint firstItem="jSD-bD-7Nd" firstAttribute="centerY" secondItem="aAT-TH-oeD" secondAttribute="centerY" id="nN7-XU-kem"/>
+                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="top" secondItem="aAT-TH-oeD" secondAttribute="bottom" constant="44" id="wah-fh-ocy"/>
                             <constraint firstItem="aAT-TH-oeD" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="16" id="zKV-YC-wnf"/>
                         </constraints>
                     </view>
@@ -177,6 +189,8 @@
     </objects>
     <resources>
         <image name="A" width="60" height="60"/>
+        <image name="alarm" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="dropDown" width="32" height="32"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

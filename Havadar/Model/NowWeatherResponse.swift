@@ -16,8 +16,8 @@ struct NowWeatherResponseElement: Codable {
     let ruzgarYon: Int
     let sicaklik: Double
     let veriZamani: String
-    let yagis00Now, yagis10Dk, yagis12Saat, yagis1Saat: Int
-    let yagis24Saat, yagis6Saat: Int
+    let yagis00Now, yagis10Dk, yagis12Saat, yagis1Saat: Double
+    let yagis24Saat, yagis6Saat: Double
     let denizVeriZamani: String
 }
  

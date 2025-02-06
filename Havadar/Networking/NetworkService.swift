@@ -166,12 +166,6 @@ class NetworkService: NetworkServiceProtocol {
     }
     
     class func defaultHeaders() -> HTTPHeaders {
-        if let token = UserDefaults.standard.authToken {
-            return HTTPHeaders([
-                .contentType("application/json"),
-                .authorization(bearerToken: token)
-            ])
-        }
         return HTTPHeaders([
             .contentType("application/json"),
             .init(name: "Origin", value: "https://mgm.gov.tr")

@@ -15,6 +15,7 @@ class HomeViewControllerViewModel {
     
     init(dataProvider: HomeViewControllerProviderProtocol) {
         self.dataProvider = dataProvider
+        UserDefaults.standard 
     }
     
     func nowWeather(merkezid: String?) {
@@ -39,7 +40,7 @@ class HomeViewControllerViewModel {
         }
     }
     
-    func fiveDaysWeather(istno: String?) {
+    func fiveDaysWeather(istno: String) {
         dataProvider.fiveDaysWeather(istno: istno)  { result in
             do {
                 try self.delegate?.fiveDaysReceiveData(_data: result.get().first)
@@ -49,16 +50,7 @@ class HomeViewControllerViewModel {
         }
     }
     
-    
-    func merkezlerWeather(sorgu: String?, limit: String?) {
-        dataProvider.merkezlerWeather(sorgu: sorgu, limit: limit) { result in
-            do {
-                try self.delegate?.merkezlerReceiveData(_data: result.get())
-            } catch {
-                print("error merkezler")
-            }
-        }
-    }
+   
     
     
 }
@@ -67,5 +59,4 @@ protocol HomeViewControllerDelegate: AnyObject {
     func nowReceiveData(_data: NowWeatherResponseElement?)
     func todayHourlyReceiveData(_data: TodayHourlyWeatherResponse?)
     func fiveDaysReceiveData(_data: FiveDaysWeatherResponse?)
-    func merkezlerReceiveData(_data: MerkezlerWeatherResponse?)
 }
